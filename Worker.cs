@@ -51,6 +51,7 @@ namespace WorkerServiceDemo
             // no need to dispose the http client here since its lifetime is tracked by HttpClientFactory
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.2#httpclient-and-lifetime-management
 
+            _logger.LogInformation("The service has been stopped");
             return base.StopAsync(cancellationToken);
         }
     }
