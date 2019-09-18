@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace workerservice_demo
+namespace WorkerServiceDemo
 {
     public class Program
     {
@@ -19,6 +15,7 @@ namespace workerservice_demo
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
+                    services.AddHttpClient<Worker>();
                 });
     }
 }
